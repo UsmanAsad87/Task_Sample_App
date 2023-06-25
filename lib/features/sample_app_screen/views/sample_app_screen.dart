@@ -42,6 +42,7 @@ class SampleAppScreen extends StatelessWidget {
                 height: 40.h,
               ),
               MainTaskWidget(noTasks: 6, name: 'Task', onTap: (){
+                Navigator.pushNamed(context, AppRoutes.singleTaskScreen);
               })
 
 
