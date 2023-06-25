@@ -14,8 +14,8 @@ import 'package:task_sample_app/utils/constants/font_manager.dart';
 import 'package:task_sample_app/utils/thems/my_colors.dart';
 import 'package:task_sample_app/utils/thems/styles_manager.dart';
 
-class SingleTaskScreen extends StatelessWidget {
-  const SingleTaskScreen({Key? key}) : super(key: key);
+class TaskPreviewScreen extends StatelessWidget {
+  const TaskPreviewScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,29 +47,17 @@ class SingleTaskScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Tasks',
-                          style: getSemiBoldStyle(
-                            fontSize: 30.spMin,
-                            color: MyColors.themeColor,
-                          ),
-                        ),
-                        Text(
-                          '6 Tasks',
-                          style: getRegularStyle(
-                            fontSize: MyFonts.size18,
-                            color: MyColors.grayScale5Color,
-                          ),
-                        ),
-                      ],
+                    Text(
+                      'Task Preview',
+                      style: getSemiBoldStyle(
+                        fontSize: 30.spMin,
+                        color: MyColors.themeColor,
+                      ),
                     ),
                     GestureDetector(
                         onTap: () {},
                         child: Image.asset(
-                          AppAssets.addIcon,
+                          AppAssets.deleteIcon,
                           width: 46.w,
                           height: 46.w,
                         )),
@@ -79,36 +67,60 @@ class SingleTaskScreen extends StatelessWidget {
               SizedBox(
                 height: 40.h,
               ),
-              SubTaskWidget(
-                  dateTime: 'Today',
-                  title:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu nulla in mi blandit sollicitudin in ut lacus.',
-                  onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.taskPreviewScreen);
-                  }),
-              SubTaskWidget(
-                  dateTime: '3 Days',
-                  title:
-                      'Consectetur adipiscing elit. Nunc eu nulla in mi blandit sollicitudin in ut lacus.',
-                  onTap: () {}),
-              SubTaskWidget(
-                  dateTime: 'Week',
-                  title:
-                      'Nunc eu nulla in mi blandit sollicitudin in ut lacus.',
-                  onTap: () {}),
-              SubTaskWidget(
-                  dateTime: 'Fortnight',
-                  title:
-                      'Maecenas posuere nunc facilisis, cursus lectus eget, interdum nisl.in mi blandit sollicitudin in ut lacus.',
-                  onTap: () {}),
-              SubTaskWidget(
-                  dateTime: 'Month',
-                  title:
-                      'Quisque sit amet porttitor massa. Maecenas nisi tellus, dapibus vitae pellentesque at sollicitudin in ut lacus.',
-                  onTap: () {}),
+              PreviewTile(title: 'Task', subtitle: 'Start working out'),
+              PreviewTile(title: 'Type', subtitle: 'Personal Project'),
+              PreviewTile(title: 'Priorty', subtitle: 'Nice to have'),
+              PreviewTile(title: 'TimeFrame', subtitle: 'Week'),
+              PreviewTile(
+                  title: 'Description ',
+                  subtitle:
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod')
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class PreviewTile extends StatelessWidget {
+  const PreviewTile({
+    super.key,
+    required this.title,
+    required this.subtitle,
+  });
+  final String title;
+  final String subtitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 8.0.h),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: getRegularStyle(
+              fontSize: MyFonts.size18,
+              color: MyColors.grayScale4Color,
+            ),
+          ),
+          Text(
+            subtitle,
+            style: getRegularStyle(
+              fontSize: MyFonts.size22,
+              color: MyColors.grayScale2Color,
+            ),
+          ),
+          SizedBox(
+            height: 10.h,
+          ),
+          Divider(
+            color: MyColors.grayScale7Color,
+            thickness: 2.h,
+          ),
+        ],
       ),
     );
   }
