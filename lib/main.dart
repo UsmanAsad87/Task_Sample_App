@@ -2,12 +2,9 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:task_sample_app/commons/common_libs.dart';
-import 'package:task_sample_app/features/auth/views/login_screen.dart';
 import 'package:task_sample_app/routes/route_manager.dart';
 import 'package:task_sample_app/utils/constants/app_constants.dart';
-import 'package:task_sample_app/utils/loading.dart';
 import 'package:task_sample_app/utils/thems/theme.dart';
-import 'package:task_sample_app/utils/thems/my_colors.dart';
 
 
 void main() async {

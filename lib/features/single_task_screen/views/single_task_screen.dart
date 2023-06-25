@@ -1,11 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:task_sample_app/commons/common_libs.dart';
-import 'package:task_sample_app/commons/common_widgets/CustomTextFields.dart';
-import 'package:task_sample_app/commons/common_widgets/custom_button.dart';
-import 'package:task_sample_app/commons/common_widgets/validator.dart';
-import 'package:task_sample_app/features/sample_app_screen/widgets/main_tasks_widget.dart';
 import 'package:task_sample_app/features/single_task_screen/widgets/sub_tasks_widget.dart';
 import 'package:task_sample_app/routes/route_manager.dart';
 import 'package:task_sample_app/utils/constants/app_constants.dart';
@@ -67,7 +62,9 @@ class SingleTaskScreen extends StatelessWidget {
                       ],
                     ),
                     GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(context, AppRoutes.newTaskScreen);
+                        },
                         child: Image.asset(
                           AppAssets.addIcon,
                           width: 46.w,
