@@ -4,6 +4,7 @@ import 'package:task_sample_app/commons/common_libs.dart';
 import 'package:task_sample_app/features/task_preview/widgets/PreviewTile.dart';
 import 'package:task_sample_app/utils/constants/app_constants.dart';
 import 'package:task_sample_app/utils/constants/assets_manager.dart';
+import 'package:task_sample_app/utils/constants/font_manager.dart';
 import 'package:task_sample_app/utils/thems/my_colors.dart';
 import 'package:task_sample_app/utils/thems/styles_manager.dart';
 
@@ -43,7 +44,7 @@ class TaskPreviewScreen extends StatelessWidget {
                     Text(
                       'Task Preview',
                       style: getSemiBoldStyle(
-                        fontSize: 30.spMin,
+                        fontSize:MyFonts.size30,
                         color: MyColors.themeColor,
                       ),
                     ),

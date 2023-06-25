@@ -27,5 +27,6 @@ class MyFonts {
   static double size22= 22.spMin;
   static double size24= 24.spMin;
   static double size26= 26.spMin;
-  static double size40= 40.spMin;
+  static double size30= 30.spMin;
+  static double size32= 32.spMin;
 }

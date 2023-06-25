@@ -2,7 +2,7 @@ import 'package:task_sample_app/utils/constants/font_manager.dart';
 
 import '../../../commons/common_libs.dart';
 
-class CustomTextFieldNew extends StatelessWidget {
+class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String? hintText;
   final Function(String) onChanged;
@@ -15,7 +15,7 @@ class CustomTextFieldNew extends StatelessWidget {
   final double? padding;
   final String labelText;
 
-  const CustomTextFieldNew({
+  const CustomTextField({
     Key? key,
     required this.controller,
     this.hintText,

@@ -48,7 +48,7 @@ class SingleTaskScreen extends StatelessWidget {
                         Text(
                           'Tasks',
                           style: getSemiBoldStyle(
-                            fontSize: 30.spMin,
+                            fontSize:MyFonts.size30,
                             color: MyColors.themeColor,
                           ),
                         ),

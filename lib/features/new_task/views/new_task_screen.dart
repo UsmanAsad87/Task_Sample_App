@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_sample_app/commons/common_libs.dart';
-import 'package:task_sample_app/commons/common_widgets/CustomTextFields.dart';
-import 'package:task_sample_app/commons/common_widgets/custom_button.dart';
-import 'package:task_sample_app/commons/common_widgets/validator.dart';
+import 'package:task_sample_app/features/new_task/widgets/custom_button.dart';
 import 'package:task_sample_app/features/new_task/widgets/DropDownWidget.dart';
-import 'package:task_sample_app/features/new_task/widgets/custom_textfield_new.dart';
+import 'package:task_sample_app/features/new_task/widgets/custom_textfield.dart';
 import 'package:task_sample_app/utils/constants/app_constants.dart';
 import 'package:task_sample_app/utils/constants/assets_manager.dart';
 import 'package:task_sample_app/utils/constants/font_manager.dart';
@@ -80,12 +78,12 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                 child: Text(
                   'New Task',
                   style: getSemiBoldStyle(
-                    fontSize: 30.spMin,
+                    fontSize:MyFonts.size30,
                     color: MyColors.themeColor,
                   ),
                 ),
               ),
-              CustomTextFieldNew(
+              CustomTextField(
                 controller: _nameCtr,
                 onChanged: (val) {},
                 onFieldSubmitted: (val) {},
@@ -126,7 +124,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                   });
                 },
               ),
-              CustomTextFieldNew(
+              CustomTextField(
                 controller: _passController,
                 onChanged: (val) {},
                 onFieldSubmitted: (val) {},

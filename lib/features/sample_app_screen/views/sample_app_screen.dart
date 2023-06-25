@@ -4,6 +4,7 @@ import 'package:task_sample_app/commons/common_libs.dart';
 import 'package:task_sample_app/features/sample_app_screen/widgets/main_tasks_widget.dart';
 import 'package:task_sample_app/routes/route_manager.dart';
 import 'package:task_sample_app/utils/constants/app_constants.dart';
+import 'package:task_sample_app/utils/constants/font_manager.dart';
 import 'package:task_sample_app/utils/thems/my_colors.dart';
 import 'package:task_sample_app/utils/thems/styles_manager.dart';
 
@@ -29,7 +30,7 @@ class SampleAppScreen extends StatelessWidget {
               Text(
                 'Sample App',
                 style: getSemiBoldStyle(
-                  fontSize: 32.spMin,
+                  fontSize:MyFonts.size32,
                   color: MyColors.themeColor,
                 ),
               ),

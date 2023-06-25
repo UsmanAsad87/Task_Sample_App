@@ -3,7 +3,6 @@ import 'package:task_sample_app/features/new_task/views/new_task_screen.dart';
 import 'package:task_sample_app/features/sample_app_screen/views/sample_app_screen.dart';
 import 'package:task_sample_app/features/single_task_screen/views/single_task_screen.dart';
 import 'package:task_sample_app/features/task_preview/views/task_preview_screen.dart';
-import 'package:task_sample_app/features/user/profile/views/profile_screen.dart';
 import 'package:task_sample_app/utils/error_screen.dart';
 import 'navigation.dart';
 
