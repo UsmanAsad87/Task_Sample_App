@@ -20,7 +20,7 @@ class NewTaskScreen extends StatefulWidget {
 
 class _NewTaskScreenState extends State<NewTaskScreen> {
   final TextEditingController _nameCtr = TextEditingController();
-  final TextEditingController _passController = TextEditingController();
+  final TextEditingController _descCtr = TextEditingController();
   GlobalKey<FormState> loginKey = GlobalKey<FormState>();
   var passObscure = true;
   String? type;
@@ -43,7 +43,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
   @override
   void dispose() {
     _nameCtr.dispose();
-    _passController.dispose();
+    _descCtr.dispose();
     super.dispose();
   }
 
@@ -136,7 +136,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                 },
               ),
               CustomTextField(
-                controller: _passController,
+                controller: _descCtr,
                 onChanged: (val) {},
                 onFieldSubmitted: (val) {},
                 labelText: 'Description',
