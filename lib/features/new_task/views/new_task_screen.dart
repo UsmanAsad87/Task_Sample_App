@@ -4,6 +4,7 @@ import 'package:task_sample_app/commons/common_libs.dart';
 import 'package:task_sample_app/features/new_task/widgets/custom_button.dart';
 import 'package:task_sample_app/features/new_task/widgets/DropDownWidget.dart';
 import 'package:task_sample_app/features/new_task/widgets/custom_textfield.dart';
+import 'package:task_sample_app/features/new_task/widgets/expand_tile_widget.dart';
 import 'package:task_sample_app/utils/constants/app_constants.dart';
 import 'package:task_sample_app/utils/constants/assets_manager.dart';
 import 'package:task_sample_app/utils/constants/font_manager.dart';
@@ -38,7 +39,6 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
     '90 Days',
     'Year'
   ];
-
 
   @override
   void dispose() {
@@ -78,7 +78,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                 child: Text(
                   'New Task',
                   style: getSemiBoldStyle(
-                    fontSize:MyFonts.size30,
+                    fontSize: MyFonts.size30,
                     color: MyColors.themeColor,
                   ),
                 ),
@@ -90,7 +90,19 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                 labelText: 'Task',
                 hintText: 'Text',
               ),
-              DropDownWidget(
+              // DropDownWidget(
+              //   hintText: '',
+              //   value: type,
+              //   labelText: 'Type',
+              //   valueItems: typeItems,
+              //   onChanged: (String? newValue) {
+              //     setState(() {
+              //       type = newValue!;
+              //     });
+              //   },
+              // ),
+
+              ExpandDropDownWidget(
                 hintText: '',
                 value: type,
                 labelText: 'Type',
@@ -101,26 +113,25 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                   });
                 },
               ),
-              DropDownWidget(
+              ExpandDropDownWidget(
                 hintText: '',
                 labelText: 'Priority',
                 value: priority,
-                valueItems:priorityItems,
+                valueItems: priorityItems,
                 onChanged: (String? newValue) {
                   setState(() {
-                    priority= newValue!;
+                    priority = newValue!;
                   });
                 },
               ),
-              DropDownWidget(
+              ExpandDropDownWidget(
                 hintText: '',
-
                 labelText: 'Timeframe',
                 value: timeFrame,
                 valueItems: timeFrameItems,
                 onChanged: (String? newValue) {
                   setState(() {
-                    timeFrame= newValue!;
+                    timeFrame = newValue!;
                   });
                 },
               ),

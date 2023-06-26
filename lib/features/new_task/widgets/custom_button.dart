@@ -1,5 +1,6 @@
 
 import 'package:task_sample_app/commons/common_libs.dart';
+import 'package:task_sample_app/utils/constants/font_manager.dart';
 import 'package:task_sample_app/utils/loading.dart';
 
 class CustomButton extends StatelessWidget {
@@ -51,7 +52,7 @@ class CustomButton extends StatelessWidget {
                       buttonText,
                       style: getMediumStyle(
                           color: textColor ?? Colors.white,
-                          fontSize: fontSize ?? 14.spMin),
+                          fontSize: fontSize ?? MyFonts.size14),
                     )),
         ),
       ),

@@ -66,7 +66,6 @@ class DropDownWidget extends StatelessWidget {
                 icon: ImageIcon(
                   const AssetImage(AppAssets.dropDownIcon),
                   size: 16.h,
-                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 value: value,
                 focusColor: MyColors.themeColor,
