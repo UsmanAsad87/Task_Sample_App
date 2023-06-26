@@ -1,17 +1,5 @@
-# task_sample_app
+# Task Sample App
 
-A new Flutter project.
+A Task App UI.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# Task_Sample_App" 
+![chrome_joijnfdwdF](https://github.com/UsmanAsad87/Task_Sample_App/assets/92229738/a7251888-dd99-4b5f-8305-9693c5e79f67)
